@@ -7,12 +7,12 @@
 
 /* Fonte e fundo do site */
 body {
+    background-color: #f0f0f0; /* Fallback antes da imagem */
     background-image: url(W9dC.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* mantém sua cor */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@ header nav ul li a:hover {
 
 /* Cartão do produto */
 .produto {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     border: 1px solid #000000;
     padding: 20px 15px;
     border-radius: 12px;
@@ -100,7 +100,7 @@ header nav ul li a:hover {
 .produto h2 {
     font-size: 1.2em;
     margin: 10px 0 12px;
-    color: #00106d; /* azul escuro para destacar */
+    color: #00106d;
 }
 
 /* Preço */
