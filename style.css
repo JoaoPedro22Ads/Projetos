@@ -51,9 +51,13 @@ header nav ul li a {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-header nav ul li a:hover,
 header nav ul li a.ativo {
-    background-color: #00106d; /* seu azul escuro */
+    background-color: #00106d; /* azul escuro */
+    color: #ffffff;
+}
+
+header nav ul li a:hover {
+    background-color: #0027b3; /* azul mais claro no hover */
     color: #ffffff;
 }
 
