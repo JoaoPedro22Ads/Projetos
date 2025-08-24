@@ -62,6 +62,9 @@ header nav ul li a:hover {
     gap: 25px;
     padding: 40px 20px;
     flex-grow: 1;
+
+    /* ✅ NOVO: força todos os cards à mesma altura */
+    align-items: stretch;
 }
 
 /* Cartão de produto */
@@ -69,11 +72,19 @@ header nav ul li a:hover {
     background-color: #fff;
     color: #000;
     border-radius: 12px;
-    width: 260px;
+    width: 300px;
     text-align: center;
     padding: 20px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* ✅ já estava, mas reforçando: flexbox interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* ✅ NOVO: altura total */
+    height: 100%;
 }
 
 .produto:hover {
@@ -91,6 +102,12 @@ header nav ul li a:hover {
     color: #00106d;
     font-size: 1.2em;
     margin-bottom: 8px;
+    min-height: 3.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
 }
 
 .produto p {
@@ -119,6 +136,9 @@ header nav ul li a:hover {
     cursor: pointer;
     width: 100%;
     transition: background-color 0.3s ease;
+
+    /* ✅ já presente: mantém botão embaixo */
+    margin-top: auto;
 }
 
 .produto a button:hover {
@@ -152,4 +172,93 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+/* Seção de apresentação */
+.apresentacao {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.apresentacao h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.8em;
+    margin: 40px 0 10px;
+}
+
+.apresentacao p {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Botões de destaque */
+.botao-destaque {
+    background-color: #00106d;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 16, 109, 0.4);
+}
+
+.botao-destaque:hover {
+    background-color: #0030e0;
+}
+
+/* Botão "Ver todos os produtos" */
+.ver-tudo {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ver-tudo button {
+    background-color: #00106d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,16,109,0.4);
+}
+
+.ver-tudo button:hover {
+    background-color: #0027b3;
+}
+
+/* Título da seção de promoções */
+.promocoes h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.produto {
+    background-color: #fff;
+    color: #000;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* ✅ NOVO: altura mínima para forçar visual igual */
+    min-height: 460px;
 }
