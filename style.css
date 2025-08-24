@@ -1,49 +1,50 @@
-/* Reset básico */
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fonte e fundo do site */
+/* ESTILO GLOBAL DO BODY */
 body {
-    background-color: #f0f0f0; /* Fallback antes da imagem */
-    background-image: url(W9dC.gif);
+    background-color: #f0f0f0;
+    background-image: url('W9dC.gif');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     font-family: Arial, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Cabeçalho */
+/* ============================= */
+/* CABEÇALHO */
+/* ============================= */
 header {
-    background-color: #000000; /* Preto */
-    color: white;
+    background-color: #000;
+    color: #fff;
     padding: 20px 15px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-/* Menu de navegação */
-header nav ul {
-    list-style: none;
-    margin-top: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+header h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
-header nav ul li {
-    display: inline-block;
+/* MENU DE NAVEGAÇÃO */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 header nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
     padding: 6px 12px;
@@ -52,18 +53,17 @@ header nav ul li a {
 }
 
 header nav ul li a.ativo {
-    background-color: #00106d; /* azul escuro */
-    color: #ffffff;
+    background-color: #00106d;
 }
 
 header nav ul li a:hover {
-    background-color: #0027b3; /* azul mais claro no hover */
-    color: #ffffff;
+    background-color: #0027b3;
+    color: #fff;
 }
 
-
-
-/* Área dos produtos */
+/* ============================= */
+/* ÁREA DE PRODUTOS */
+/* ============================= */
 .produtos {
     display: flex;
     justify-content: center;
@@ -73,10 +73,18 @@ header nav ul li a:hover {
     flex-grow: 1;
 }
 
-/* Cartão do produto */
+.produtos h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    color: #00106d;
+}
+
+/* CARTÃO DO PRODUTO */
 .produto {
-    background-color: #ffffff;
-    border: 1px solid #000000;
+    background-color: #fff;
+    border: 1px solid #000;
     padding: 20px 15px;
     border-radius: 12px;
     width: 220px;
@@ -90,7 +98,7 @@ header nav ul li a:hover {
     box-shadow: 5px 8px 15px rgba(0,0,0,0.25);
 }
 
-/* Imagem do produto */
+/* IMAGEM DO PRODUTO */
 .produto img {
     max-width: 100%;
     height: auto;
@@ -98,25 +106,25 @@ header nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-/* Nome do produto */
-.produto h2 {
+/* TÍTULO DO PRODUTO */
+.produto h3 {
     font-size: 1.2em;
     margin: 10px 0 12px;
     color: #00106d;
 }
 
-/* Preço */
+/* PREÇO DO PRODUTO */
 .produto p {
     font-size: 1.15em;
-    color: #000000;
+    color: #000;
     margin-bottom: 15px;
     font-weight: 600;
 }
 
-/* Botão de compra */
+/* BOTÃO DE COMPRA */
 .produto button {
-    background-color: #00106d; /* azul escuro */
-    color: white;
+    background-color: #00106d;
+    color: #fff;
     border: none;
     padding: 12px 20px;
     cursor: pointer;
@@ -129,13 +137,15 @@ header nav ul li a:hover {
 }
 
 .produto button:hover {
-    background-color: #0027b3; /* azul mais claro no hover */
+    background-color: #0027b3;
 }
 
-/* Rodapé */
+/* ============================= */
+/* RODAPÉ */
+/* ============================= */
 footer {
-    background-color: #000000;
-    color: white;
+    background-color: #000;
+    color: #fff;
     text-align: center;
     padding: 40px 20px;
     font-size: 0.9em;
@@ -143,7 +153,9 @@ footer {
     margin-top: auto;
 }
 
-/* Responsividade para dispositivos menores */
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
 @media (max-width: 700px) {
     header nav ul {
         flex-direction: column;
@@ -153,7 +165,6 @@ footer {
     .produtos {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
         padding: 20px 10px;
     }
 
